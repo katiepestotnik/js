@@ -16,3 +16,39 @@ second.innerText = 'Second div with an id'
 
 // const userName = prompt('Tell me your name')
 // alert(`Hello ${userName}`)
+
+
+///input box code
+
+const input = document.querySelector('.input')
+const btn = document.querySelector('.btn')
+const inputDiv = document.querySelector('.input-div')
+
+
+console.log(input.value)
+
+
+const addName = (e) => {
+    e.preventDefault()
+    const li = document.createElement('li')
+    li.innerText = input.value
+    li.style.listStyle = 'none'
+    inputDiv.append(li)
+    input.value = ''
+
+}
+btn.addEventListener('click', addName)
+
+//selecting multiple elements
+
+const firstLi = document.querySelector('.list')
+//firstLi = document.querySelector('.first-li')
+
+
+const allLis = document.querySelectorAll('.list')
+//console.log(firstLi)
+console.log(allLis)
+
+allLis.forEach((li) => {
+    li.style.backgroundColor = 'green'
+})
