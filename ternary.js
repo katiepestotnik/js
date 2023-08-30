@@ -12,3 +12,13 @@ if (isJavaScriptFun) {
 } else {
     console.log('i\m still learning...')
 }
+
+const findLarger = (num1, num2) => {
+    return num1 > num2 ? num1 : num2
+}
+console.log('with ternary:', findLarger(20, 80))
+
+const findMax = (num1, num2) => {
+    return Math.max(num1, num2)
+}
+console.log('with Math method:', findMax(220,88))
